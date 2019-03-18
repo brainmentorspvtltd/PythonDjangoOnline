@@ -1,0 +1,37 @@
+python -m http.server --cgi
+
+python -m http.server --cgi 9999
+
+install mysql
+
+install xampp / wampp
+
+
+
+
+SQL - Structured Query Language
+
+Execute Queries
+Retrive Data from database
+Insert Data to database
+
+CRUD
+
+CREATE DATABASE db_name;
+
+use db_name
+
+CREATE TABLE employees (emp_id int, emp_name varchar(255), dept varchar(255), city varchar(255), salary double);
+
+pip install pymysql
+
+INSERT INTO employees VALUES (101,'Ram','IT','Chennai',45000);
+
+
+
+
+
+
+
+
+
