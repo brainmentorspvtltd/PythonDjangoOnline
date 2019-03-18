@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="cgi-bin/register.py" method="post">
+        <table>
+            <tr>
+                <td>Enter ID</td>
+                <td>
+                    <input type="text" placeholder="Enter ID" name="emp_id">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Name</td>
+                <td>
+                    <input type="text" placeholder="Enter Name" name="emp_name">
+                </td>
+            </tr>
+            <tr>
+                <td>Select Dept</td>
+                <td>
+                    <select name="emp_dept">
+                        <option>Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="BPO">BPO</option>
+                        <option value="tech">Tech Support</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select City</td>
+                <td>
+                    <select name="emp_city">
+                        <option>Select City</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Noida">Noida</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Salary</td>
+                <td>
+                    <input type="text" placeholder="Enter Salary" name="emp_sal">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset">
+                </td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <a href="cgi-bin/showData.py">Show Data</a>
+
+</body>
+
+</html>
