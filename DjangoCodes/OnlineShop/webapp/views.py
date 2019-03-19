@@ -51,3 +51,20 @@ def contact(req):
 
 def about(req):
     return render(req, 'about.html')
+
+def search(req):
+    product = req.GET['product']
+    product = product.lower()
+    searchResult = []
+    # print(product)
+    for data in productsList:
+        if product == data['brand'].lower() or product == data['p_category'].lower():
+            searchResult.append(data)
+    
+    return render(req, 'include/search.html', {'products':searchResult})
+
+def register(req):
+    useremail = req.POST['u_email']
+    userpwd = req.POST['u_pwd']
+
+    return render(req, 'index.html', {'user_id':useremail, 'products':productsList})
