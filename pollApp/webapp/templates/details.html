@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>{{question}}</h1>
+
+<form action="{% url 'pollApp:vote' question.id %}" method="post"> {% csrf_token %}
+    <ul class="list-group">
+        {% for choice in question.choice_set.all %}
+        <li class="list-group-item">
+            <input type="radio" required name="choice" id="{{forloop.counter}}" value="{{choice.id}}">
+            <label for="{{forloop.counter}}">{{choice.choice_text}}</label>
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <input class="btn btn-primary w-25" type="submit" value="Vote">
+</form>
+
+
+{% endblock %}

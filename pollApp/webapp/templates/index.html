@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Welcome to Poll App</h1>
+
+<!-- <h2>{{questions}}</h2> -->
+<h2>Questions</h2>
+<ul>
+    {% for ques in questions %}
+    <li>
+        <a href="{% url 'pollApp:detail' ques.id %}">
+            {{ques.question_text}}
+        </a>
+        <span>
+            {{ques.pub_date}}
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
